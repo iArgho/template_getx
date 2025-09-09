@@ -1,1 +1,4 @@
-Map<String, String> languageBanglaData = {'title': 'GetX টেমপ্লেট'};
+Map<String, String> languageBanglaData = {
+  'title': 'GetX টেমপ্লেট',
+  'login': 'লগইন',
+};

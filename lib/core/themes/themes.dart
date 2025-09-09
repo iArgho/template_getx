@@ -1,8 +1,8 @@
-import 'package:app_getx/app/routes/routes.dart';
-import 'package:app_getx/core/constants/language/language.dart';
+import 'package:template_getx/app/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:template_getx/core/constants/language/language.dart';
 
 class TemplateGetx extends StatelessWidget {
   const TemplateGetx({super.key});
