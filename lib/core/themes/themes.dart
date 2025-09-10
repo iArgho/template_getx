@@ -18,9 +18,10 @@ class TemplateGetx extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'TemplateGetx',
           translations: Language(),
-          locale: const Locale('bn', 'BD'), //default locale
+          locale: const Locale('en', 'US'), //default locale
           fallbackLocale: const Locale('en', 'US'),
           theme: ThemeData(
+            primaryColor: const Color(0xFF39B54A),
             useMaterial3: true,
             scaffoldBackgroundColor: Colors.white,
             //fontFamily: 'Inter',
