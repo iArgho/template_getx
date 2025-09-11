@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             SvgPicture.asset(
               'assets/logos/aurora.svg',
-              width: 200.w,
+              width: 0.8.sw,
               colorFilter: const ColorFilter.mode(
                 Color(0xFF39B54A),
                 BlendMode.srcIn,

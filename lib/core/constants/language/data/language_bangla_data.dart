@@ -8,4 +8,6 @@ Map<String, String> languageBanglaData = {
   'forgotPassword': 'পাসওয়ার্ড ভুলে গেছেন?',
   'noAccount': 'একাউন্ট নেই?',
   'signUp': 'সাইন আপ',
+  'rememberMe': 'আমাকে মনে রাখুন',
+  'forgetPassword': 'পাসওয়ার্ড ভুলে গেছেন?',
 };

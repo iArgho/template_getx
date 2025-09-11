@@ -18,7 +18,7 @@ class TextWidgetButton extends StatelessWidget {
       height: 40.h,
       width: double.infinity,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.r),
+        borderRadius: BorderRadius.circular(8.r),
         color: AppColors.primary,
       ),
       child: ElevatedButton(
@@ -28,7 +28,7 @@ class TextWidgetButton extends StatelessWidget {
           shadowColor: Colors.transparent,
 
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.r),
+            borderRadius: BorderRadius.circular(8.r),
           ),
         ),
         child: Text(
@@ -36,7 +36,7 @@ class TextWidgetButton extends StatelessWidget {
           style: TextStyle(
             fontSize: 16.sp,
             color: Colors.white,
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w500,
           ),
         ),
       ),

@@ -10,6 +10,8 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool rememberMe = false;
+
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -20,18 +22,18 @@ class LoginScreen extends StatelessWidget {
               SizedBox(height: 60.h),
               SvgPicture.asset(
                 'assets/logos/aurora.svg',
-                width: 200.w,
+                width: 260.w,
                 colorFilter: const ColorFilter.mode(
                   Color(0xFF39B54A),
                   BlendMode.srcIn,
                 ),
               ),
-              SizedBox(height: 60.h),
+              SizedBox(height: 120.h),
 
               /// Email
               Text(
                 'enterEmail'.tr,
-                style: TextStyle(fontSize: 15.sp, fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400),
               ),
               SizedBox(height: 6.h),
               InputField(
@@ -43,11 +45,64 @@ class LoginScreen extends StatelessWidget {
               /// Password
               Text(
                 'enterPassword'.tr,
-                style: TextStyle(fontSize: 15.sp, fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400),
               ),
               SizedBox(height: 6.h),
               InputField(hintText: 'password'.tr, obscureText: true),
-              SizedBox(height: 24.h),
+
+              SizedBox(height: 12.h),
+
+              StatefulBuilder(
+                builder: (context, setState) {
+                  return Row(
+                    children: [
+                      SizedBox(
+                        width: 18.w,
+                        height: 18.w,
+                        child: Checkbox(
+                          value: rememberMe,
+                          onChanged: (value) {
+                            setState(() {
+                              rememberMe = value ?? false;
+                            });
+                          },
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(6.r),
+                          ),
+                          materialTapTargetSize:
+                              MaterialTapTargetSize.shrinkWrap,
+                          activeColor: const Color(0xFF39B54A),
+                          visualDensity: VisualDensity
+                              .compact, // removes extra touch padding
+                        ),
+                      ),
+                      SizedBox(width: 6.w),
+                      Text('rememberMe'.tr, style: TextStyle(fontSize: 12.sp)),
+                      Spacer(),
+                      TextButton(
+                        onPressed: () {
+                          // Navigate to signup
+                        },
+                        style: TextButton.styleFrom(
+                          padding: EdgeInsets.zero,
+                          minimumSize: Size.zero,
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        ),
+                        child: Text(
+                          'forgotPassword'.tr,
+                          style: TextStyle(
+                            fontSize: 12.sp,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
+
+              SizedBox(height: 40.h),
 
               /// Login button
               TextWidgetButton(
@@ -56,34 +111,30 @@ class LoginScreen extends StatelessWidget {
                   // Handle login action
                 },
               ),
-              SizedBox(height: 24.h),
 
-              /// Forgot Password
-              TextButton(
-                onPressed: () {
-                  // Handle forgot password
-                },
-                child: Text(
-                  'forgotPassword'.tr,
-                  style: TextStyle(fontSize: 14.sp),
-                ),
-              ),
               SizedBox(height: 16.h),
 
-              /// Signup navigation
+              /// Already have account? Sign Up (optional alternative row)
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('noAccount'.tr, style: TextStyle(fontSize: 14.sp)),
+                  Text('noAccount'.tr, style: TextStyle(fontSize: 12.sp)),
+                  SizedBox(width: 6.w),
                   TextButton(
                     onPressed: () {
                       // Navigate to signup
                     },
+                    style: TextButton.styleFrom(
+                      padding: EdgeInsets.zero,
+                      minimumSize: Size.zero,
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ),
                     child: Text(
                       'signUp'.tr,
                       style: TextStyle(
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.bold,
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black,
                       ),
                     ),
                   ),

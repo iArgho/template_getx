@@ -8,4 +8,6 @@ Map<String, String> languageEnglishData = {
   'forgotPassword': 'Forgot Password?',
   'noAccount': "Don't have an account?",
   'signUp': 'Sign Up',
+  'rememberMe': 'Remember Me',
+  'forgetPassword': 'Forgot Password?',
 };
